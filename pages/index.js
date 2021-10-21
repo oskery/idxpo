@@ -1,7 +1,10 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [mouseX, setMouseX] = useState()
+  const [mouseY, setMouseY] = useState()
   const title = 'Lost in Language'
   const handleScroll = () => {
     console.log('scroll')
@@ -9,6 +12,11 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+
+    document.onmousemove = function (event) {
+      setMouseX(event.pageX)
+      setMouseY(event.pageY)
+    }
   })
   return (
     <>
@@ -21,7 +29,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <h1 className="p uppercase">{title}</h1>
+      <img src="/debris.gif" class="full" />
+      <img src="/bus.gif" class="bus" />
+      <a className="planet" href="/game">
+        <img src="/planet.png" />
+      </a>
+      <img src="/title.gif" class="title" />
+      <img src="/stars.svg" class="stars" />
+
+      <a href="https://www.idxpo.se/2021/">
+        <img src="/idx.svg" class="idx" />
+      </a>
+      <video
+        autoPlay
+        muted="muted"
+        playsInline
+        dataJsVideoplayer
+        type="video/mp4"
+        loop="loop"
+        src="/title.mov"
+      ></video>
 
       <main className="flex-1">
         <br />
