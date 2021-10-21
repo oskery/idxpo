@@ -10,6 +10,7 @@ body,
 }
 
 #__next {
+  background-image: url('~/public/stars.png');
   display: flex;
   > * {
     display: inline-flex;
