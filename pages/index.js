@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
@@ -29,17 +30,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <img src="/debris.gif" class="full" />
-      <img src="/bus.gif" class="bus" />
-      <a className="planet" href="/game">
-        <img src="/planet.png" />
-      </a>
-      <img src="/title.gif" class="title" />
-      <img src="/stars.svg" class="stars" />
+      <img src="/debris.gif" className="full" />
+      <img src="/bus.gif" className="bus" />
+      <Link href="/game">
+        <a className="planet">
+          <img src="/planet.png" />
+        </a>
+      </Link>
+      <img src="/title.gif" className="title" />
+      <img src="/stars.svg" className="stars" />
 
-      <a href="https://www.idxpo.se/2021/">
-        <img src="/idx.svg" class="idx" />
-      </a>
+      <Link href="https://www.idxpo.se/2021/">
+        <a>
+          <img src="/idx.svg" className="idx" />
+        </a>
+      </Link>
       <video
         autoPlay
         muted="muted"
