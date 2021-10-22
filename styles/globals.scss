@@ -14,7 +14,9 @@ body,
 }
 
 #__next {
+  overflow: scroll;
   background-image: url('~/public/stars.png');
+  background-repeat: repeat;
   display: flex;
   > * {
     display: inline-flex;
@@ -48,17 +50,36 @@ video {
   position: fixed;
   z-index: 4;
   left: 3vh;
-  height: 10vw;
+  > img {
+    transition: 0.5s all;
+    position: absolute;
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:first-child {
+      left: 5vw;
+    }
+    height: 5vw;
+  }
+  &:hover {
+    > img:first-child {
+      opacity: 0;
+    }
+    > img:nth-child(2) {
+      opacity: 1;
+    }
+  }
   top: 3vh;
 }
 
 .iframe {
   height: 720px;
-  width: 960px;
+  width: 968px;
   overflow: hidden;
+  border-radius: 10px;
   iframe {
-    margin-top: -50px;
-    margin-left: -5px;
+    margin-top: -46px;
+    margin-left: -8px;
     width: 968px;
     height: 802px;
     background: transparent;
@@ -66,12 +87,28 @@ video {
 }
 
 .planet {
-  box-shadow: 0px 0px 100px rgba(0, 88, 251, 1);
+  box-shadow: 0px 0 20px 10px rgba(67, 133, 255, 0.5);
+  > img {
+    transition: all 0.4s ease-in-out;
+  }
+  transition: all 0.4s ease-in-out;
+
   &:hover {
     cursor: pointer;
-    box-shadow: none;
-    transform: scale(2);
-    transition: ease-in-out all 1s;
+    box-shadow: 0px 0 40px 40px rgba(67, 133, 255, 0.3);
+    h1 {
+      text-shadow: 0px 0px rgba(67, 133, 255, 0.3);
+    }
+    > img {
+      transform: scale(2);
+    }
+  }
+  h1 {
+    position: absolute;
+    white-space: nowrap;
+    top: -70px;
+    left: -100px;
+    font-size: 2rem;
   }
   position: fixed;
   border-radius: 50%;
@@ -136,4 +173,115 @@ a {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(58px, 9999px, 81px, 0);
+  }
+
+  5% {
+    clip: rect(27px, 9999px, 88px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 46px, 0);
+  }
+
+  15% {
+    clip: rect(62px, 9999px, 53px, 0);
+  }
+
+  20% {
+    clip: rect(71px, 9999px, 76px, 0);
+  }
+
+  25% {
+    clip: rect(53px, 9999px, 33px, 0);
+  }
+
+  30% {
+    clip: rect(76px, 9999px, 30px, 0);
+  }
+
+  35% {
+    clip: rect(49px, 9999px, 53px, 0);
+  }
+
+  40% {
+    clip: rect(79px, 9999px, 15px, 0);
+  }
+
+  45% {
+    clip: rect(1px, 9999px, 1px, 0);
+  }
+
+  50% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  55% {
+    clip: rect(2px, 9999px, 35px, 0);
+  }
+
+  60% {
+    clip: rect(68px, 9999px, 4px, 0);
+  }
+
+  65% {
+    clip: rect(31px, 9999px, 84px, 0);
+  }
+
+  70% {
+    clip: rect(30px, 9999px, 47px, 0);
+  }
+
+  75% {
+    clip: rect(70px, 9999px, 89px, 0);
+  }
+
+  80% {
+    clip: rect(51px, 9999px, 75px, 0);
+  }
+
+  85% {
+    clip: rect(79px, 9999px, 10px, 0);
+  }
+
+  90% {
+    clip: rect(67px, 9999px, 76px, 0);
+  }
+
+  95% {
+    clip: rect(47px, 9999px, 53px, 0);
+  }
+
+  100% {
+    clip: rect(54px, 9999px, 13px, 0);
+  }
+}
+
+.link:after,
+.link:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: inherit;
+  background: #121212;
+  opacity: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.link:before {
+  left: -2px;
+  text-shadow: 1px 0 green;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+
+.link:after {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
 }
