@@ -47,20 +47,7 @@ export default function Home() {
       <main>
         <img src="/bus.gif" className="bus" />
 
-        <section>
-          <div className="title">
-            <img src="/signs.svg" />
-            <img src="/text.svg" />
-          </div>
-          <p>
-            A game to bring awareness to the communicational challenges
-            international students face
-          </p>
-          <p>
-            In this game you travel to a planet, populated with aliens that
-            speak a language you do not understand.
-          </p>
-        </section>
+        <div className="title"></div>
       </main>
 
       <footer>
