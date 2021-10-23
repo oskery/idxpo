@@ -111,8 +111,8 @@ section {
       }
       h1 {
         height: min(20vmin, 100px);
+        animation: flicker2 10s infinite alternate-reverse;
         background-image: url('/signs.svg');
-        animation: flicker2 3s infinite alternate-reverse;
         &:before {
           left: 0.5vmin;
         }
@@ -126,13 +126,13 @@ section {
         left: 0;
         height: 100%;
         width: 100%;
+        animation: flicker 10s infinite alternate-reverse;
         background-image: url('/text.svg');
-        animation: flicker 3s infinite alternate-reverse;
         &:before {
-          left: 0.2vmin;
+          left: 0.7vmin;
         }
         &:after {
-          left: -0.2vmin;
+          left: -0.4vmin;
         }
       }
     }
@@ -163,7 +163,7 @@ section {
     right: 0;
     bottom: 0;
     background: inherit;
-    clip: rect(0px, 575px, 150px, 0px);
+    clip: rect(0px, 575px, 130px, 0px);
   }
   &:before {
     animation: glitch-effect 2s infinite linear forwards;
@@ -301,7 +301,15 @@ a {
 @keyframes glitch-effect {
   @for $i from 0 through 20 {
     #{percentage($i*(1/20))} {
-      clip: rect(random(100) + px, 1000px, random(100) + px, 0);
+      clip: rect(random(100) + px, 1000px, random(120) + px, 0);
+    }
+  }
+}
+
+@keyframes glitch-effect2 {
+  @for $i from 0 through 20 {
+    #{percentage($i*(1/20))} {
+      clip: rect(random(80) + px, 1000px, random(80) + px, 0);
     }
   }
 }
@@ -310,19 +318,73 @@ a {
   0% {
     opacity: 1;
   }
+  9.5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 0;
+  }
+  15.5% {
+    opacity: 1;
+  }
+  20.99% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 0;
+  }
+  21.5% {
+    opacity: 1;
+  }
   24.99% {
     opacity: 1;
   }
   25% {
     opacity: 0;
   }
+  30.99% {
+    opacity: 0;
+  }
+  31% {
+    opacity: 1;
+  }
+  31.5% {
+    opacity: 0;
+  }
   66% {
     opacity: 0;
   }
-  66.1% {
+  66.5% {
     opacity: 1;
   }
   67% {
+    opacity: 0;
+  }
+  69.5% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  80.5% {
+    opacity: 0;
+  }
+  85.5% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  90.5% {
     opacity: 0;
   }
   100% {
@@ -340,7 +402,10 @@ a {
   10.99% {
     opacity: 1;
   }
-  11% {
+  15.99% {
+    opacity: 1;
+  }
+  16% {
     opacity: 0;
   }
   20.99% {
@@ -349,13 +414,46 @@ a {
   21% {
     opacity: 1;
   }
+  21.5% {
+    opacity: 0;
+  }
+  24.5% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
   66% {
     opacity: 1;
   }
-  66.1% {
+  66.6% {
     opacity: 0;
   }
   67% {
+    opacity: 1;
+  }
+  69.5% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  80.5% {
+    opacity: 1;
+  }
+  85.5% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  90.5% {
     opacity: 1;
   }
   100% {

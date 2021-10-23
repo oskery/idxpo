@@ -29,16 +29,17 @@ export default function App() {
         <a
           style={{
             right: '2rem',
-            background: 'green',
+            background: 'radial-gradient(lightgreen, green)',
             borderRadius: '50%',
-            height: '3rem',
-            width: '3rem',
+            height: '4rem',
+            width: '4rem',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             position: 'fixed',
             top: '2rem',
-            zIndex: 10
+            zIndex: 10,
+            fontSize: '1.4rem'
           }}
         >
           PLAY
