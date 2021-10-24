@@ -109,7 +109,7 @@ export default function App() {
               style={{
                 width: '50vmin',
                 marginLeft: '4%',
-                transform: 'rotate(10deg)'
+                transform: 'rotate(5deg)'
               }}
             />
           </ParallaxLayer>
@@ -148,60 +148,115 @@ export default function App() {
 
           <ParallaxLayer offset={2} speed={0.8} style={{ opacity: 0.1 }}>
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '55%' }}
+              src="/signs/walk.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '55%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '10%', marginLeft: '15%' }}
+              src="/signs/ugly.svg"
+              style={{
+                display: 'block',
+                width: '10%',
+                marginLeft: '15%',
+                filter: 'invert(1)'
+              }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={2.75} speed={0.5} style={{ opacity: 0.1 }}>
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '70%' }}
+              src="/signs/there.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '70%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '40%' }}
+              src="/signs/special.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '40%',
+                filter: 'invert(1)'
+              }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={2} speed={0.2} style={{ opacity: 0.2 }}>
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '10%', marginLeft: '10%' }}
+              src="/signs/table.svg"
+              style={{
+                display: 'block',
+                width: '10%',
+                marginLeft: '10%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '75%' }}
+              src="/signs/sleep.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '75%',
+                filter: 'invert(1)'
+              }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={2.6} speed={-0.1} style={{ opacity: 0.4 }}>
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '60%' }}
+              src="/signs/puke.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '60%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '25%', marginLeft: '30%' }}
+              src="/signs/pharmacy.svg"
+              style={{
+                display: 'block',
+                width: '15%',
+                marginLeft: '10%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '10%', marginLeft: '80%' }}
+              src="/signs/pasta.svg"
+              style={{
+                display: 'block',
+                width: '10%',
+                marginLeft: '80%',
+                filter: 'invert(1)'
+              }}
             />
           </ParallaxLayer>
 
           <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '20%', marginLeft: '5%' }}
+              src="/signs/orange.svg"
+              style={{
+                display: 'block',
+                width: '20%',
+                marginLeft: '5%',
+                filter: 'invert(1)'
+              }}
             />
             <img
-              src={url('cloud')}
-              style={{ display: 'block', width: '15%', marginLeft: '75%' }}
+              src="/signs/hospital.svg"
+              style={{
+                display: 'block',
+                width: '15%',
+                marginLeft: '75%',
+                filter: 'invert(1)'
+              }}
             />
           </ParallaxLayer>
 
@@ -228,28 +283,38 @@ export default function App() {
               justifyContent: 'center'
             }}
           >
-            <div className="card">
+            <div className="card" style={{ marginTop: 100 }}>
               <h2>The game</h2>
-              <div>
+
+              <div style={{ flexDirection: 'row' }}>
                 <img
-                  src="/happy-alien.gif"
-                  height="130px"
+                  src="/walking.gif"
+                  width="200px"
                   style={{
-                    right: '-40px',
                     position: 'absolute',
-                    bottom: '-40px',
-                    transform: 'rotate(-20deg)'
+                    left: '-20px'
                   }}
                 />
-                <p>
+                <p style={{ paddingLeft: 100 }}>
                   <b>
                     <i>Lost in Language</i>
                   </b>{' '}
                   is a side-scrolling game where the player needs to interact
                   and understand the language of aliens in order to progress.
                 </p>
-                <br />
-                <br />
+              </div>
+              <br />
+
+              <div style={{ flexDirection: 'row' }}>
+                <span>
+                  With the help of a <i>translomat</i> the player can collect
+                  and translate the unknown symbols.
+                </span>
+                <img
+                  src="/translomat.png"
+                  height="100px"
+                  style={{ marginTop: -10 }}
+                />
               </div>
             </div>
           </ParallaxLayer>
@@ -265,25 +330,18 @@ export default function App() {
             }}
           >
             <div className="card">
-              <h2>The game</h2>
+              <h2>Purpose</h2>
               <div>
-                <img
-                  src="/world.svg"
-                  style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0
-                  }}
-                />
                 <p>
-                  <b>
-                    <i>Lost in Language</i>
-                  </b>{' '}
-                  is a side-scrolling game where the player needs to interact
-                  and understand the language of aliens.
+                  The aim is to paint a picture of the hardships that comes with
+                  communicating in foreign environments.
                 </p>
                 <br />
-                <br />
+                <p>
+                  By forcing the player to engage in conversations they can
+                  barely understand, we hope to bring awareness specficially to
+                  challenges that international students face on a daily basis.
+                </p>
               </div>
             </div>
           </ParallaxLayer>
@@ -298,7 +356,23 @@ export default function App() {
             }}
             onClick={() => parallax.current.scrollTo(4)}
           >
-            <img src={url('clients-main')} style={{ width: '40%' }} />
+            <div className="card">
+              <h2>Ingredients</h2>
+              <div>
+                <p>
+                  The game was made with Scratch and contains a bunch of custom
+                  made assets and animations.
+                </p>
+                <br />
+                <div
+                  style={{ flexDirection: 'row', gap: 10, flexWrap: 'wrap' }}
+                >
+                  <img src="/buildings.png" height="100px" />{' '}
+                  <img src="/env.png" height="100px" />{' '}
+                  <img src="/translomat.png" height="100px" />
+                </div>
+              </div>
+            </div>
           </ParallaxLayer>
           <ParallaxLayer
             offset={4}
@@ -310,7 +384,21 @@ export default function App() {
             }}
             onClick={() => parallax.current.scrollTo(5)}
           >
-            <img src={url('clients-main')} style={{ width: '40%' }} />
+            <h2>Exhibition</h2>
+            <p style={{ maxWidth: '50vw', textAlign: 'center' }}>
+              At the end of the project there was an exhibition. An arcade
+              machine was made along with some posters.
+            </p>
+            <br />
+
+            <img
+              src="/arcade.jpg"
+              style={{
+                maxWidth: '50vw',
+                maxHeight: '60vh',
+                borderRadius: '20px'
+              }}
+            />
           </ParallaxLayer>
           <ParallaxLayer
             offset={5}
@@ -324,27 +412,97 @@ export default function App() {
           >
             <div className="card card-transparent">
               <h2>Thanks for coming by!</h2>
-              <div>
-                <img
-                  src="/happy-alien.gif"
-                  height="130px"
-                  style={{
-                    right: '-40px',
-                    position: 'absolute',
-                    bottom: '-40px',
-                    transform: 'rotate(-20deg)'
-                  }}
-                />
-                <p>
-                  <b>
-                    <i>Lost in Language</i>
-                  </b>{' '}
-                  is a side-scrolling game where the player needs to interact
-                  and understand the language of aliens in order to progress.
-                </p>
-                <br />
-                <br />
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr 1fr',
+                  fontSize: '.8rem',
+                  gap: 10
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Emmanuel Brorsson
+                </div>
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Amos Cappellaro
+                </div>
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Svend Geerthsen
+                </div>
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Oskar Lyrstrand
+                </div>
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Mattias Nilsson
+                </div>
+                <div>
+                  <div
+                    style={{
+                      height: 100,
+                      width: 100,
+                      background: `url('/planet.png')`,
+                      backgroundSize: 'contain',
+                      borderRadius: '50%'
+                    }}
+                  ></div>
+                  Joel Sörensson
+                </div>
               </div>
+              <img
+                src="/happy-alien.gif"
+                height="130px"
+                style={{
+                  right: '-40px',
+                  position: 'absolute',
+                  bottom: '-40px',
+                  transform: 'rotate(-20deg)'
+                }}
+              />
             </div>
           </ParallaxLayer>
         </Parallax>
