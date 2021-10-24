@@ -1,18 +1,22 @@
+import Head from 'next/head'
+
 import { useRef, useState } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import Link from 'next/link'
-// Little helpers ...
-const url = (name, wrap = false) =>
-  `${
-    wrap ? 'url(' : ''
-  }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
-    wrap ? ')' : ''
-  }`
+const title = 'Lost in Language'
 
 export default function App() {
   const parallax = useRef()
   return (
     <>
+      <Head>
+        <title>{title}</title>
+        <meta
+          name="description"
+          content="CIU265 Interaction Design Project, class of 2021. Chalmers University of Technology"
+        />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <Link href="https://www.idxpo.se/2021/">
         <a
           style={{
